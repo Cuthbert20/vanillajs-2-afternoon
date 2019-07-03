@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.post {
+    border: 1px brown solid;
+    height: 70vh;
+    width: 30vw;
+    padding: .5rem;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.header {
+    /*100% width will take up a 100% of the parent element minus the padding so you have to make sure the parent element has a width set */
+    width: 100%;
+    height: 10%;
+    border: 1px solid blue;
+    margin-bottom: .25rem;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.main-photo {
+    height: 70%;
+    width: 100%;
+    border: solid 1px pink;
+    margin-bottom: .5rem;
+    object-fit: cover;
+}
+
+.text {
+    border: dotted 1px purple;
+    height: 8%;
+    width: 100%;
+    margin-bottom: .5rem;
+}
+
+.footer {
+    border: dotted black 1.5px;
+    height: 7%;
+    width: 100%;
+}
+
+.user {
+    border: 1px solid red;
+    width: 25%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    margin: 0;
+
+}
+
+.more {
+    border: 1px black solid;
+    width: 2rem;
+    height: 2rem;
+}
