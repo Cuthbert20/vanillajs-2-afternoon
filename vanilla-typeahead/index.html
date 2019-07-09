@@ -84,6 +84,39 @@
 </body>
 
 <script>
+    let characters = [];
+    let list = document.getElementById('list')
+    let search = document.getElementsByName('input').value
+   
+    fetch("https://swapi.co/api/people")
+    //here we are parcing response to a json file
+    .then(response => {
+     return response.json()
+    }).then(response => 
+    { characters.push(...response.results)//... creates a copy of response.results so that if it changes later it won't affect characters
+    render()
+    })
+    //console.log(characters)
+
+    function filterText(){
+        
+    }
+    
+
+    function render(){
+        let html = characters.map(value => `<li>${value.name}</li>`).join('')
+        list.innerHTML = html
+    }
+
+
+    //EXP of ... ie spread operator
+    // let arr = [1,2,3]
+    // let arr2 = [...arr]
+    // arr.push(4,5)
+    // console.log(arr)
+    // console.log(arr2)
+
+
 </script>
 
 </html>
